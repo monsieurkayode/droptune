@@ -46,10 +46,6 @@ html, body {
 
 body {
   margin: 0;
-  background: #fff;
-
-  &.dark {
-    color: $gray;
-    background: $darkest;
-  }
+  background: $dark;
+  color: white;
 }

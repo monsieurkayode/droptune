@@ -20,7 +20,7 @@
     <meta name="apple-music-developer-token" content="<%= ENV['apple_token'] %>">
     <meta name="apple-music-app-name" content="Droptune">
     <meta name="apple-music-app-build" content="1">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600,800|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -53,7 +53,7 @@
           <%= link_to "Artists", artists_path, class: controller_name=='artists' ? 'active' : '' %>
           <%= link_to "Charts", charts_path, class: controller_name=='charts' ? 'active' : '' %>
           <%= link_to "Playlists", playlists_path, class: controller_name=='playlists' ? 'active' : '' %>
-          <%= link_to "Genres", genres_path, 'data-turbolinks': "false", class: controller_name=='genres' ? 'active' : '' %>
+          <%#= link_to "Genres", genres_path, 'data-turbolinks': "false", class: controller_name=='genres' ? 'active' : '' %>
           <%= link_to raw('<i class="fas fa-search"></i>'), '#', class: (controller_name=='artists' && action_name=='search') ? 'search-button active' : 'search-button' %>
         </nav>
         <%= form_tag(search_artists_path, method: 'get', class: 'search-form', enforce_utf8:false) do %>
@@ -93,7 +93,7 @@
 
     <footer>
       <div class="container">
-        <p>Got feedback? Want to contribute? <a href="https://github.com/DroptuneHQ/droptune">Droptune is open source!</a></p>
+        <p><strong>Droptune is a live work-in-progress.</strong> Got feedback? Want to contribute? <a href="https://github.com/DroptuneHQ/droptune">Droptune is open source!</a></p>
         <p>Original idea by <a href="https://twitter.com/Shpigford">@Shpigford</a>. Maintained by <a href="https://twitter.com/Shpigford">@Shpigford</a> with the help of <a href="https://github.com/DroptuneHQ/droptune/graphs/contributors">our contributors</a>!</p>
       </div>
     </footer>
